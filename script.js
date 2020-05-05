@@ -83,7 +83,13 @@ function checkInput(client) {
     client.focus();
   } else {
     createTeam(client.value);
+    showLoad();
   }
+}
+
+function showLoad() {
+  document.querySelector("#create").textContent = "";
+  document.querySelector("#create").classList.add("loading");
 }
 
 function createTeam(clientName) {
