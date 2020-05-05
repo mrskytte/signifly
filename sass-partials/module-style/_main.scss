@@ -48,6 +48,9 @@ header {
     span {
       color: darken($color: colors.$bg, $amount: 10%);
     }
+    .clientname {
+      color: inherit;
+    }
   }
   object {
     height: 4vh;
@@ -62,6 +65,9 @@ main {
   section {
     width: 90%;
     margin: 5em auto;
+    &.hide {
+      display: none;
+    }
     h2 {
       font-size: 1.3em;
       margin-left: 0.3em;
