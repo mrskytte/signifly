@@ -3,11 +3,42 @@
 body {
   background-color: colors.$bg;
 }
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 95%;
+  height: 60vh;
+  margin: auto;
+  h1 {
+    font-size: 5em;
+    text-transform: uppercase;
+    margin: auto auto 1em 5%;
+    line-height: 1em;
+    letter-spacing: -3px;
+    span {
+      color: darken($color: colors.$bg, $amount: 10%);
+    }
+  }
+  object {
+    height: 4vh;
+    margin: 1em 0 auto auto;
+  }
+}
 main {
   width: 100vw;
   section {
     width: 90%;
-    margin: auto;
+    margin: 5em auto;
+    h2 {
+      font-size: 1.3em;
+      margin-left: 0.3em;
+    }
+    p {
+      font-size: 0.9em;
+      margin: -0.2em auto 0.3em 0.1em;
+    }
   }
 }
 .content {
