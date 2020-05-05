@@ -30,22 +30,22 @@ function handleData(data) {
 function createCards(card) {
   const template = document.querySelector("template").content;
   const copy = template.cloneNode(true);
-
-  copy
-    .querySelector("img")
-    .setAttribute("src", `${endpoint}/media/${card.image[0]}`);
+  copy.querySelector(
+    ".card"
+  ).style.backgroundImage = `url(${endpoint}/media/${card.image[0]})`;
   copy.querySelector(".name").textContent = card.name;
   copy.querySelector(".position").textContent = card.position;
   copy.querySelector(".phone").textContent = card.phone;
+  copy.querySelector(".phone").setAttribute("href", `tel: ${card.phone}`);
   copy.querySelector(".email").textContent = card.email;
-  copy.querySelector(".background").textContent = card.background;
-  copy.querySelector(".link").setAttribute("href", `${card.link}`);
-  copy.querySelector(".link-name").textContent = card.name.substring(
-    0,
-    card.name.indexOf(" ")
-  );
+  copy.querySelector(".email").setAttribute("href", `mailto: ${card.email}`);
+  copy.querySelector(".background-info").textContent = card.background;
 
-  console.log(card);
+  copy
+    .querySelector("button")
+    .addEventListener("click", (e) =>
+      e.target.parentNode.classList.add("active")
+    );
 
-  document.querySelector("#developers>.content").appendChild(copy);
+  document.querySelector(`#${card.department}>.content`).appendChild(copy);
 }

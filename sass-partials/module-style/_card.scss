@@ -1,0 +1,95 @@
+@use '../base-style/colors';
+
+.card {
+  &.active {
+    box-shadow: 0px 7px 4px 0px rgba($color: #000000, $alpha: 0.1);
+    transform: translatey(-6px);
+  }
+  transition: box-shadow 0.2s, transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  width: 100%;
+  background-image: url();
+  background-position: top;
+  background-size: cover;
+  border-radius: 5px;
+  overflow: hidden;
+  .container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+  }
+  .details {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 20% 5% 60% 15%;
+    grid-template-areas:
+      "name name"
+      "pos pos"
+      "background background"
+      "phone mail";
+    height: 50%;
+    width: 100%;
+    margin: auto;
+    margin-bottom: 0;
+    padding: 1em;
+    background-color: colors.$primary;
+    border-radius: 1.4em 1.4em 0 0;
+    box-shadow: 0px -3px 5px 1px rgba(0, 0, 0, 0.2);
+  }
+  .name {
+    line-height: 1em;
+    grid-area: name;
+    font-size: 1.1em;
+    align-self: center;
+    margin-right: 0.5em;
+  }
+  .position {
+    color: lighten($color: colors.$secondary, $amount: 60%);
+    font-size: 0.9em;
+    grid-area: pos;
+  }
+  .phone {
+    color: lighten($color: colors.$secondary, $amount: 60%);
+    grid-area: phone;
+    font-size: 0.8em;
+    margin-top: 1em;
+    margin-left: 1em;
+  }
+  .email {
+    color: lighten($color: colors.$secondary, $amount: 60%);
+    justify-self: end;
+    margin-top: 1em;
+    margin-right: 1em;
+    grid-area: mail;
+    font-size: 0.8em;
+  }
+  .background-info {
+    margin-top: 1em;
+    align-self: start;
+    font-size: 15.5px;
+    line-height: 1.3em;
+    grid-area: background;
+  }
+  .link {
+    grid-area: more;
+    font-size: 0.8em;
+  }
+  a:hover {
+    color: #4f00cf;
+  }
+  button {
+    all: initial;
+    background-color: lighten($color: colors.$accent, $amount: 10%);
+    height: 7%;
+    text-align: center;
+    color: colors.$primary;
+    cursor: pointer;
+    &:hover {
+      background-color: colors.$accent;
+    }
+  }
+}
