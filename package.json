@@ -21,12 +21,12 @@
   },
   "homepage": "https://github.com/mrskytte/signifly#readme",
   "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/plugin-transform-runtime": "^7.8.3",
     "css-loader": "^3.5.1",
     "parcel-bundler": "^1.12.4",
     "parcel-plugin-static-files-copy": "^2.3.1",
-    "sass": "^1.26.3",
-    "@babel/core": "^7.9.0",
-    "@babel/plugin-transform-runtime": "^7.8.3"
+    "sass": "^1.26.5"
   },
   "dependencies": {
     "gh": "^2.8.6",
