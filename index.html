@@ -4,52 +4,58 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-<link rel="stylesheet" href="style.scss">
+    <link rel="stylesheet" href="style.scss" />
   </head>
   <body>
     <header>
-        <object data="./static/signifly.svg" type="image/svg+xml"></object>
-        <h1 class="title">Build <br/><span class="bold">Your Team</span></h1>
+      <object data="./static/signifly.svg" type="image/svg+xml"></object>
+      <h1 class="title">Build <br /><span class="bold">Your Team</span></h1>
+      <label for="clientname">
+        Who are you building a team for?
+        <input class="bold" type="text" id="clientname" />
+        <p class="warning">Please enter a client name</p>
+      </label>
     </header>
     <main>
       <section id="team-leader">
-          <h2>Team Leaders</h2>
-          <p>Choose one person to lead the team</p>
-          <div class="content"></div>
+        <h2>Team Leaders</h2>
+        <p>Choose one person to lead the team</p>
+        <div class="content"></div>
       </section>
       <section id="strategy">
-          <h2>Strategists</h2>
-          <p>Choose who will shape new opportunities</p>
-          <div class="content"></div>
+        <h2>Strategists</h2>
+        <p>Choose who will shape new opportunities</p>
+        <div class="content"></div>
       </section>
       <section id="design">
-          <h2>Designers</h2>
-          <p>Choose who will make the things the users like</p>
-          <div class="content"></div>
+        <h2>Designers</h2>
+        <p>Choose who will make the things the users like</p>
+        <div class="content"></div>
       </section>
       <section id="development">
-          <h2>Developers</h2>
-          <p>Choose who to deploy high-performance solutions</p>
-          <div class="content"></div>
+        <h2>Developers</h2>
+        <p>Choose who to deploy high-performance solutions</p>
+        <div class="content"></div>
       </section>
+      <button class="bold" id="create">CREATE YOUR TEAM</button>
     </main>
 
-<template>
-    <div class="card">
+    <template>
+      <div class="card">
         <div class="container">
-            <div class="details">
-                <h4 class="name"></h4>
-                <p class="position"></p>
-                <a class="phone" href="tel: +4526369592"></a>
-                <a class="email" href="mailto: mr.skytte@me.com">shoot me an e-mail</a>
-                <p class="background-info"></p>
-            </div>
+          <div class="details">
+            <h4 class="name"></h4>
+            <p class="position"></p>
+            <a class="phone" href="tel: +4526369592"></a>
+            <a class="email" href="mailto: mr.skytte@me.com"
+              >shoot me an e-mail</a
+            >
+            <p class="background-info"></p>
+          </div>
         </div>
         <button data-state="add">ADD TO TEAM</button>
-    </div>
-
-</input>
-</template>
+      </div>
+    </template>
     <script src="script.js"></script>
   </body>
 </html>
