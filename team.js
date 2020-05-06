@@ -49,8 +49,7 @@ function handleData(members) {
 function removeEmptySections() {
   const sections = document.querySelectorAll("section");
   sections.forEach((section) => {
-    console.log(section.childNodes[5].childNodes.length);
-    if (section.childNodes[5].childNodes.length === 0) {
+    if (section.childNodes[3].childNodes.length === 0) {
       section.classList.add("hide");
     }
   });
