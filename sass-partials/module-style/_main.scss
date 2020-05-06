@@ -98,7 +98,7 @@ main {
 
 #create {
   padding: 1em 2em;
-  font-size: 2rem;
+  font-size: 1rem;
   margin: auto;
   border: none;
   background-color: lighten($color: colors.$accent, $amount: 10%);
@@ -106,7 +106,7 @@ main {
   color: colors.$primary;
   cursor: pointer;
   border-radius: 5px;
-  box-shadow: 0px 4px 4px 2px rgba($color: #000000, $alpha: 0.1);
+  box-shadow: 0px 4px 2px 0px rgba($color: #000000, $alpha: 0.4);
   transition: box-shadow 0.3s, background-color 0.3s;
   &:hover {
     box-shadow: 0px 0px 0px 0px rgba($color: #000000, $alpha: 0.1);
@@ -122,6 +122,12 @@ main {
     border-top: 40px solid lighten($color: colors.$accent, $amount: 10%);
     animation: spin 1s ease infinite forwards;
   }
+}
+
+footer {
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
 }
 
 @keyframes spin {
