@@ -1,6 +1,7 @@
 @use '../base-style/colors';
 
 body {
+  overflow-y: hidden;
   scroll-behavior: smooth;
   background-color: colors.$bg;
 }
@@ -77,6 +78,9 @@ main {
       position: sticky;
       top: 0;
       background-color: colors.$bg;
+      &.team {
+        position: relative;
+      }
     }
     h2 {
       font-size: 1.3em;
