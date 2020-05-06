@@ -88,6 +88,6 @@ async function postTeam(data) {
     body: postData,
   });
   const response = await posting.json();
-  window.location = `/team.html?client=${response.name}&id=${response._id}`;
+  window.location.href = `team.html?client=${response.name}&id=${response._id}`;
   console.log(response);
 }
