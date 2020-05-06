@@ -42,7 +42,7 @@
     grid-area: name;
     font-size: 1.1em;
     align-self: center;
-    margin-right: 0.5em;
+    padding: 2px;
   }
   .position {
     color: lighten($color: colors.$secondary, $amount: 60%);
