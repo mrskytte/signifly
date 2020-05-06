@@ -1,7 +1,7 @@
 @use '../base-style/colors';
 
 body {
-  overflow-y: hidden;
+  overflow-x: hidden;
   scroll-behavior: smooth;
   background-color: colors.$bg;
 }
